@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Text Analyzer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    textarea {
+      width: 100%;
+      height: 150px;
+      padding: 10px;
+      font-size: 15px;
+      resize: vertical;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 15px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #results {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+      display: none;
+    }
+
+    #results p {
+      margin: 5px 0;
+      font-size: 15px;
+    }
+
+    #reversedText {
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Text Analyzer</h1>
+
+  <textarea id="inputText" placeholder="Paste your text here..."></textarea>
+  <br>
+  <button onclick="analyzeText()">Analyze Text</button>
+
+  <div id="results">
+    <p><strong>Total Characters:</strong> <span id="charCount"></span></p>
+    <p><strong>Total Words:</strong> <span id="wordCount"></span></p>
+    <p><strong>Reversed Text:</strong></p>
+    <p id="reversedText"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
